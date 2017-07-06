@@ -10,3 +10,14 @@ Template.lista.helpers({
 
 
 });
+
+
+Template.lista.events({
+
+  "click button" : function(e, template) {
+    var tarefa = this;
+
+    Tarefas.remove({ _id: tarefa._id });
+  }
+
+});

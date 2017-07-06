@@ -12,4 +12,5 @@ Template.novo.events({
 
   }
 
+
 });
