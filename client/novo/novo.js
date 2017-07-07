@@ -1,5 +1,4 @@
 Template.novo.events({
-
   "submit #adicionaTarefa" : function(e, template){
     e.preventDefault();
 
@@ -7,12 +6,9 @@ Template.novo.events({
     var nome = input.val();
 
     //Tarefas.insert({nome: nome, data: new Date()}); // não seguro devido o autopublishing q estava ativado
-    Meteor.call("adiciona", {nome: nome});
-    
+    Meteor.call("adiciona", {nome: nome, usuario: this.userId});
+
     input.val("");
-    intput.focus();
-
+    input.focus();
   }
-
-
 });
